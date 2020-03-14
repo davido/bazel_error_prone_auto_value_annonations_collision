@@ -1,0 +1,25 @@
+java_library(
+    name = "flogger_works",
+    srcs = ["java/com/google/gerrit/common/flogger/NamedFluentLogger.java"],
+    deps = [
+        "@flogger//jar",
+    ],
+)
+
+java_library(
+    name = "flogger_broken",
+    srcs = ["java/com/google/gerrit/common/flogger/NamedFluentLogger.java"],
+    deps = [
+        "@com_google_auto_value",
+        "@flogger//jar",
+    ],
+)
+
+java_library(
+    name = "flogger_workaround",
+    srcs = ["java/com/google/gerrit/common/flogger/NamedFluentLogger.java"],
+    deps = [
+        "@com_google_auto_value_with_errorprone_annotations",
+        "@flogger//jar",
+    ],
+)
